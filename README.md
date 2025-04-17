@@ -28,7 +28,7 @@ Coming soon...
 
 ## 🚀 Live Demo
 
-Check out the live demo here: 👉 [dixit-points-counter.vercel.app](https://dixit-scoreboard-two.vercel.app/)
+Check out the live demo here: 👉 [Dixit Scoreboard hosted on Vercel](https://dixit-scoreboard-two.vercel.app/)
 
 ## 🛠️ Tech Stack
 
