@@ -11,9 +11,8 @@ export default function Home() {
         <p>The rules of the game can be found <a href="https://cdn.1j1ju.com/medias/8f/03/3d-dixit-rulebook.pdf"
                                                  target="_blank"
                                                  rel="noopener noreferrer"
-                                                 style={{ textDecoration: "underline" }}>here</a>.</p>
+                                                 style={{textDecoration: "underline"}}>here</a>.</p>
       </div>
-
       <Game/>
     </main>
   );

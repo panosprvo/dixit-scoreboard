@@ -30,14 +30,14 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  opacity: 0.45; /* fades it */
+  opacity: 0.3; /* fades it */
   z-index: -1; /* push it behind everything */
 }
 
 main {
   position: relative;
   z-index: 1;
-  padding: 2rem;
+  padding: 32px;
 }
 
 .game-container {
@@ -95,13 +95,6 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .rules {
-    width: 90%;
-    padding: 10px;
-  }
-}
-
 .rules {
   display: flex;
   flex-direction: column;
@@ -121,4 +114,18 @@ h1 {
 
 .rules ul {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  main {
+    position: relative;
+    z-index: 1;
+    padding: 32px;
+  }
+
+  .rules {
+    font-size: 11px;
+    width: 80vw;
+    padding: 10px;
+  }
 }
