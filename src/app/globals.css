@@ -196,4 +196,9 @@ h1 {
     width: auto;
     justify-content: flex-end;
   }
+
+  .modal {
+    top: 40%;
+    transform: translateY(-50%);
+  }
 }
