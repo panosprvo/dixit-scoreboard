@@ -15,6 +15,7 @@ export default function Game() {
     }
   }, []);
   const [players, setPlayers] = useState<{ name: string; score: number }[]>([]);
+  const [storytellerIndex, setStorytellerIndex] = useState<number | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalAction, setModalAction] = useState<'reset' | 'clear' | null>(null);
 
@@ -59,10 +60,17 @@ export default function Game() {
     setPlayers([]);
   };
 
+  const handleStorytellerClick = (index: number) => {
+    setStorytellerIndex(storytellerIndex === index ? null : index);
+  }
+
   return (
     <div className="game-container">
       <AddPlayerForm onAddPlayer={addPlayer} />
-      <PlayerList players={players} onScoreChange={updateScore} />
+      <PlayerList players={players}
+                  onScoreChange={updateScore}
+                  storytellerIndex={storytellerIndex}
+                  onStorytellerClick={handleStorytellerClick} />
       <ScoreControls
         onReset={() => openModal('reset')}
         onClearPlayers={() => openModal('clear')}
