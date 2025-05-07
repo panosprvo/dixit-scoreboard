@@ -111,7 +111,6 @@ main {
 
 .player-info div {
   margin: 0 50px 0 50px;
-  padding: 0 15px 0 15px;
 }
 
 .player-item button {
@@ -179,5 +178,22 @@ h1 {
     font-size: 11px;
     width: 80vw;
     padding: 10px;
+  }
+
+  .player-item {
+    flex-wrap: nowrap;
+  }
+
+  .player-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .player-buttons {
+    width: auto;
+    justify-content: flex-end;
   }
 }
