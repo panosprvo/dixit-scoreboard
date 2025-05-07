@@ -15,11 +15,11 @@ export default function AddPlayerForm({ onAddPlayer }: { onAddPlayer: (name: str
     <form onSubmit={handleSubmit} className="add-player-form">
       <input
         type="text"
-        placeholder="Enter player name"
+        placeholder="Enter storyteller name"
         value={name}
         onChange={e => setName(e.target.value)}
       />
-      <button type="submit">Add Player</button>
+      <button className="submit-button" type="submit">Add Storyteller 🔮</button>
     </form>
   );
 }

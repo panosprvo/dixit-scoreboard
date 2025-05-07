@@ -11,10 +11,16 @@ export default function PlayerItem({
 }) {
   return (
     <li className="player-item">
-      <span style={{ color: 'black' }}>{name}</span>
-      <span style={{ color: 'black' }}>{score}</span>
-      <button onClick={() => onScoreChange(index, +1)}>+</button>
-      <button onClick={() => onScoreChange(index, -1)}>-</button>
+      <div className="player-info">
+        <div style={{color: 'black'}}>{name}</div>
+        <div style={{color: 'black'}}>{score}</div>
+      </div>
+      <div>
+        <button onClick={() => onScoreChange(index, +1)}>+1</button>
+        <button onClick={() => onScoreChange(index, +2)}>+2</button>
+        <button onClick={() => onScoreChange(index, +3)}>+3</button>
+        <button onClick={() => onScoreChange(index, -1)}>-1</button>
+      </div>
     </li>
   );
 }

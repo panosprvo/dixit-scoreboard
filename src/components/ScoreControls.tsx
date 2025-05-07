@@ -1,7 +1,14 @@
-export default function ScoreControls({ onReset }: { onReset: () => void }) {
+export default function ScoreControls({
+  onReset,
+  onClearPlayers,
+}: {
+  onReset: () => void
+  onClearPlayers: () => void
+}) {
   return (
     <div className="score-controls">
-      <button onClick={onReset}>Reset Game</button>
+      <button className="reset-button" onClick={onReset}>Reset Scoreboard</button>
+      <button className="reset-button" onClick={onClearPlayers}>Clear Players</button>
     </div>
   );
 }

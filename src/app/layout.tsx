@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${calistoga.className}`}>
-      <div className="background" />
+      <div id="__next" className="background" />
         {children}
       </body>
     </html>
