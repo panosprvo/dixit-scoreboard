@@ -1,11 +1,19 @@
 'use client';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import PlayerList from './PlayerList';
 import AddPlayerForm from './AddPlayerForm';
 import ScoreControls from './ScoreControls';
 import Modal from 'react-modal';
 
 export default function Game() {
+  useEffect(() => {
+    const appElement = document.getElementById('__next');
+    if (appElement) {
+      Modal.setAppElement('#__next');
+    } else {
+      console.error('__next element not found');
+    }
+  }, []);
   const [players, setPlayers] = useState<{ name: string; score: number }[]>([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalAction, setModalAction] = useState<'reset' | 'clear' | null>(null);
@@ -66,7 +74,6 @@ export default function Game() {
         contentLabel='Confirmation Modal'
         className='modal'
         overlayClassName='modal-overlay'
-        appElement={document.getElementById('__next') || document.body}
       >
         <h2>Are you sure?</h2>
         <p>
